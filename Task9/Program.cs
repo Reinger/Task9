@@ -22,6 +22,7 @@ namespace Task9
                     Console.WriteLine("Ошибка ввода. Нужно ввести целое число больше 0");
                     Console.ReadLine();
                     Console.Clear();
+                    ok = false;
                 }
             } while (!ok);
 
@@ -33,6 +34,22 @@ namespace Task9
             int n = ReadInt("n=");
             List l=new List();
             l=l.New(n);
+            Console.Clear();
+
+            l.Show();
+
+
+            int k = ReadInt("Значение для поиска: ");
+            l.Search(k);
+            Console.ReadLine();
+            Console.Clear();
+
+
+            l.Show();
+            k = ReadInt("Значение для удаления: ");
+            l.Delete(k);
+            Console.Clear();
+
             l.Show();
 
             Console.ReadLine();

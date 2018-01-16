@@ -44,22 +44,31 @@ namespace Task9
                 Console.Write("{0} ",beg.data);
                 beg = beg.next;
             }
+            Console.WriteLine();
         }
 
         public List Delete(int n)
         {
             List beg = this;
-            while (beg.next != null || beg.data != n)
+            if (beg.data==n)
             {
                 beg = beg.next;
+                return beg;
             }
+            List p = beg;
+            for (int i = 1; p.next.data!=n && p != null; i++)
+                p = p.next;
+            if (p == null)
+                return beg;
+            p.next = p.next.next;
             return beg;
+
         }
 
         public void Search(int n)
         {
             List beg = this;
-            while (beg.next != null || beg.data != n)
+            while (beg.next != null && beg.data != n)
             {
                 beg = beg.next;
             }
