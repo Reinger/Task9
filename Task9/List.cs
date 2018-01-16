@@ -46,6 +46,27 @@ namespace Task9
             }
         }
 
+        public List Delete(int n)
+        {
+            List beg = this;
+            while (beg.next != null || beg.data != n)
+            {
+                beg = beg.next;
+            }
+            return beg;
+        }
+
+        public void Search(int n)
+        {
+            List beg = this;
+            while (beg.next != null || beg.data != n)
+            {
+                beg = beg.next;
+            }
+            if (beg.data==n) Console.WriteLine("Элемент найден");
+            else Console.WriteLine("Элемент не найден");
+        }
+
         public override string ToString()
         {
             return data + " ";

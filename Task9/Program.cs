@@ -32,7 +32,7 @@ namespace Task9
         {
             int n = ReadInt("n=");
             List l=new List();
-            l = l.New(n);
+            l=l.New(n);
             l.Show();
 
             Console.ReadLine();
