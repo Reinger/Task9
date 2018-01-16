@@ -38,7 +38,12 @@ namespace Task9
 
         public void Show()
         {
-
+            List beg = this;
+            while (beg.next!=null)
+            {
+                Console.Write("{0} ",beg.data);
+                beg = beg.next;
+            }
         }
 
         public override string ToString()
